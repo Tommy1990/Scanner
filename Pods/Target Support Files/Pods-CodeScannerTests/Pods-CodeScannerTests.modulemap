@@ -1,0 +1,6 @@
+framework module Pods_CodeScannerTests {
+  umbrella header "Pods-CodeScannerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
