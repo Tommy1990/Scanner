@@ -75,7 +75,8 @@ class ScannnerViewController: UIViewController {
 }
 extension ScannnerViewController:AVCaptureMetadataOutputObjectsDelegate{
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-       
+        let vibrateID = SystemSoundID(kSystemSoundID_Vibrate)
+        AudioServicesPlaySystemSound(vibrateID)
         var res:String = ""
         if metadataObjects.count > 0{
             //MARK:-- get one res then stop discren
