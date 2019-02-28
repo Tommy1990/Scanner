@@ -93,9 +93,8 @@ class MainViewController: UIViewController {
         }
         let vc = ScannnerViewController()
         vc.codeLength = 12
-        vc.showAll = true
+//        vc.showAll = true
         vc.resClouser = {[weak self] (sn) in
-            print(sn)
             self?.resListInsert(sn)
             
         }

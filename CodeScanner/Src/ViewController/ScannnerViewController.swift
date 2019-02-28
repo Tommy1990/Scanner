@@ -51,8 +51,7 @@ class ScannnerViewController: UIViewController {
             if self.session.canAddOutput(output){
                 self.session.addOutput(output)
                 output.metadataObjectTypes = output.availableMetadataObjectTypes
-                
-                //                    [AVMetadataObject.ObjectType.qr,.ean13,.ean8,.code128]
+//                [AVMetadataObject.code128]
                 
             }
             
