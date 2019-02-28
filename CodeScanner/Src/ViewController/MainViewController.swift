@@ -77,6 +77,7 @@ class MainViewController: UIViewController {
         resTabView.register(UITableViewCell.self, forCellReuseIdentifier: "cell0")
         resTabView.register(ScannerTabCell.self, forCellReuseIdentifier: "cell1")
         NotificationCenter.default.addObserver(self, selector: #selector(applicationWillTermianal), name: UIApplication.willTerminateNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationWillTermianal), name: UIApplication.willResignActiveNotification, object: nil)
         scanBtn.addTarget(self, action: #selector(scanBtnClick(_:)), for: .touchUpInside)
         submitBtn.addTarget(self, action: #selector(submitBtnClick(_:)), for: .touchUpInside)
     }
