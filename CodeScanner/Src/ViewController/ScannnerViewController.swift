@@ -71,9 +71,15 @@ class ScannnerViewController: UIViewController {
         for i in 0 ..< list.count{
             if let temp = list[i] as? AVMetadataMachineReadableCodeObject{
                 if let res = temp.stringValue{
-                    if res.count == codeLength || showAll{
-                        return res
+                    print(res)
+                    if res.first == "S"{
+                        let tempRes = String(res.dropFirst())
+                        print(tempRes)
+                        if tempRes.count == codeLength || showAll{
+                            return tempRes
+                        }
                     }
+                    
                 }
             }
         }
