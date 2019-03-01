@@ -57,6 +57,14 @@ class ScannnerViewController: UIViewController {
             
         }
         session.startRunning()
+        
+        do{
+            try self.device?.lockForConfiguration()
+        }catch _ {
+           print("lock configuration error")
+        }
+        self.device?.videoZoomFactor = 1.5
+        self.device?.unlockForConfiguration()
     }
     
     private func getTargetSN(_ list:[AVMetadataObject]) -> String{
